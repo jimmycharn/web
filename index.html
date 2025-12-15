@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- ตั้งค่าให้รองรับการแสดงผลแบบ Full Screen (PWA) เมื่อ Add to Home Screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- หรือ default / black -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="Money Tracker">
+    <meta name="apple-mobile-web-app-title" content="Money Tracker">
+    
+    <!-- ไอคอนสำหรับ iOS (ควรเตรียมรูป icon.png ขนาด 192x192 ไว้ที่โฮสต์เดียวกันถ้าทำได้) -->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2830/2830305.png">
+
     <title>Money Tracker</title>
     <style>
         /* ตั้งค่าให้เต็มหน้าจอและไม่มีขอบ */
@@ -10,14 +22,17 @@
             margin: 0; 
             padding: 0; 
             height: 100%; 
+            width: 100%;
             overflow: hidden; 
             background-color: #f8fafc;
+            /* ป้องกันการเด้งของหน้าจอใน iOS */
+            position: fixed; 
         }
         iframe { 
             width: 100%; 
             height: 100%; 
             border: none; 
-            display: block; /* แก้ปัญหาช่องว่างด้านล่าง */
+            display: block; 
         }
     </style>
 </head>
