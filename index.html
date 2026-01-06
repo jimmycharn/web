@@ -2,47 +2,49 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    
-    <!-- ตั้งค่าให้รองรับการแสดงผลแบบ Full Screen (PWA) เมื่อ Add to Home Screen -->
+
+    <!-- อนุญาตให้ซูม -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
+    <!-- รองรับ Full Screen แบบ PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#ffffff">
     <meta name="application-name" content="Money Tracker">
     <meta name="apple-mobile-web-app-title" content="Money Tracker">
-    
-    <!-- ไอคอนสำหรับ iOS -->
-    <link rel="apple-touch-icon" href="https://images.icon-icons.com/2983/PNG/256/wallet_money_bills_purse_icon_187082.png">
-    
+
+    <link rel="apple-touch-icon"
+          href="https://images.icon-icons.com/2983/PNG/256/wallet_money_bills_purse_icon_187082.png">
+
     <title>Money Tracker</title>
+
     <style>
-        /* ตั้งค่าให้เต็มหน้าจอและสามารถซูมได้ */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            width: 100%;
-            overflow: auto; 
-            background-color: #f8fafc;
-            /* เปลี่ยนจาก fixed เป็น relative เพื่อให้ซูมได้ */
-            position: relative;
-            /* เปิดใช้ smooth scrolling */
-            -webkit-overflow-scrolling: touch;
-        }
-        iframe { 
-            width: 100%; 
+        body, html {
+            margin: 0;
+            padding: 0;
             height: 100%;
-            min-height: 100vh;
-            border: none; 
+            width: 100%;
+            background-color: #f8fafc;
+
+            /* ❌ เอาออกเพื่อให้ซูมได้ */
+            /* overflow: hidden; */
+            /* position: fixed; */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
             display: block;
-            /* เปิดใช้การซูมใน iframe */
-            touch-action: manipulation;
         }
     </style>
 </head>
+
 <body>
-    <!-- นำ URL ของ Google Apps Script (ที่ลงท้ายด้วย /exec) มาใส่ตรง src -->
-    <iframe src="https://script.google.com/macros/s/AKfycbzOG5pm5NrWFwax4yLBxzqY3N_tP5dW_vWa9HaWBUUbLzCfkXoMZV8sjqQ1P6torVt1Mg/exec" allowfullscreen></iframe>
+    <iframe
+        src="https://script.google.com/macros/s/AKfycbzOG5pm5NrWFwax4yLBxzqY3N_tP5dW_vWa9HaWBUUbLzCfkXoMZV8sjqQ1P6torVt1Mg/exec">
+    </iframe>
 </body>
 </html>
